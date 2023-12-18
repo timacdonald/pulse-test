@@ -9,10 +9,9 @@ use Illuminate\Foundation\Testing\DatabaseTruncation;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class A8ExampleTest extends TestCase
 {
     use DatabaseTruncation;
-
 
     protected function setUp(): void
     {
@@ -64,7 +63,7 @@ class ExampleTest extends TestCase
         }
     }
 
-    #[DataProvider('registerProvider')]
+     #[DataProvider('registerProvider')]
     public function test_application_can_handle_multiple_registers4($data): void
     {
         foreach (range(1, 1) as $index) {
@@ -75,7 +74,7 @@ class ExampleTest extends TestCase
         }
     }
 
-    #[DataProvider('registerProvider')]
+     #[DataProvider('registerProvider')]
     public function test_application_can_handle_multiple_registers5($data): void
     {
         foreach (range(1, 1) as $index) {
@@ -86,71 +85,8 @@ class ExampleTest extends TestCase
         }
     }
 
-    #[DataProvider('registerProvider')]
+     #[DataProvider('registerProvider')]
     public function test_application_can_handle_multiple_registers6($data): void
-    {
-        foreach (range(1, 1) as $index) {
-            $user = User::factory(1)->create();
-            foreach ($user as $item) {
-                $this->assertDatabaseHas('users', $item->toArray());
-            }
-        }
-    }
-    #[DataProvider('registerProvider')]
-    public function test_application_can_handle_multiple_registers7($data): void
-    {
-        foreach (range(1, 1) as $index) {
-            $user = User::factory(1)->create();
-            foreach ($user as $item) {
-                $this->assertDatabaseHas('users', $item->toArray());
-            }
-        }
-    }
-    #[DataProvider('registerProvider')]
-    public function test_application_can_handle_multiple_registers8($data): void
-    {
-        foreach (range(1, 1) as $index) {
-            $user = User::factory(1)->create();
-            foreach ($user as $item) {
-                $this->assertDatabaseHas('users', $item->toArray());
-            }
-        }
-    }
-    #[DataProvider('registerProvider')]
-    public function test_application_can_handle_multiple_registers9($data): void
-    {
-        foreach (range(1, 1) as $index) {
-            $user = User::factory(1)->create();
-            foreach ($user as $item) {
-                $this->assertDatabaseHas('users', $item->toArray());
-            }
-        }
-    }
-
-        #[DataProvider('registerProvider')]
-    public function test_application_can_handle_multiple_registers10($data): void
-    {
-        foreach (range(1, 1) as $index) {
-            $user = User::factory(1)->create();
-            foreach ($user as $item) {
-                $this->assertDatabaseHas('users', $item->toArray());
-            }
-        }
-    }
-
-        #[DataProvider('registerProvider')]
-    public function test_application_can_handle_multiple_registers11($data): void
-    {
-        foreach (range(1, 1) as $index) {
-            $user = User::factory(1)->create();
-            foreach ($user as $item) {
-                $this->assertDatabaseHas('users', $item->toArray());
-            }
-        }
-    }
-
-        #[DataProvider('registerProvider')]
-    public function test_application_can_handle_multiple_registers12($data): void
     {
         foreach (range(1, 1) as $index) {
             $user = User::factory(1)->create();
@@ -164,7 +100,7 @@ class ExampleTest extends TestCase
     public static function registerProvider()
     {
         $data = [];
-        for ($i = 2; $i <= 2; $i++) {
+        for ($i = 2; $i <= 4; $i++) {
             $data[] = [$i];
         }
 

@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\DatabaseTruncation;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class C28ExampleTest extends TestCase
 {
     use DatabaseTruncation;
 
